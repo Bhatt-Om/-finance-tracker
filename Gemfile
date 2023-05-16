@@ -74,3 +74,5 @@ end
 gem 'pry-rails'
 
 gem 'devise'
+
+gem 'devise-bootstrap-views', '~> 1.0'
