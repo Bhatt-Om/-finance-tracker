@@ -76,3 +76,5 @@ gem 'pry-rails'
 gem 'devise'
 
 gem 'devise-bootstrap-views', '~> 1.0'
+
+gem 'iex-ruby-client'
