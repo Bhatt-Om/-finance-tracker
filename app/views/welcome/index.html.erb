@@ -1,4 +1,27 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%# <%= button_to 'logout', destroy_user_session_path, method: :delete %>
 
-<%= button_to 'logout', destroy_user_session_path, method: :delete %>
+<header class="jumbotron jumbotron-fluid bg-primary text-white", style="background-image: linear-gradient(to right, #2641C2, #01BFFD);">
+    <div class="container text-center">
+      <h1 class="display-4">Welcome to Finance Tracker</h1>
+      <p class="lead">Track and manage your finances with ease.</p>
+      <%# <a href="#" class="btn btn-light btn-lg">Get Started</a> %>
+      <%= link_to 'Get Started', my_portfolio_path, class: "btn btn-light btn-lg" %>
+    </div>
+  </header>
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Track Expenses</h3>
+        <p>Effortlessly track your expenses and categorize them for better financial management.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Create Budgets</h3>
+        <p>Set up budgets to control your spending and achieve your financial goals.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Generate Reports</h3>
+        <p>Generate comprehensive reports to gain insights into your financial activities.</p>
+      </div>
+    </div>
+  </section>

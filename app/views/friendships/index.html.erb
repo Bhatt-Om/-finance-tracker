@@ -1,0 +1,28 @@
+<h1>All Users List</h1>
+<div class="row">
+  <div class="col-9">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Email</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+        <%  User.where.not(id: current_user.id).each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.first_name %></td>
+            <td><%= user.last_name %></td>
+            <td><%= button_to "Add To Friends", folllow_path(user_id: current_user.id, friend_id: user.id ), method: :post %></td>
+          </tr>
+        <% end %>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  
+
