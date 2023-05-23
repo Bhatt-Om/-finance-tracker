@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(params[:user_id])
-    redirect_to @user
+    redirect_to 'users/show' , allow_other_host: true
   end
   def search
     if params[:friend].present?
