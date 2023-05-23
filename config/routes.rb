@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'search_friend', to: 'users#search'
   get 'friend', to: 'friendships#index'
   post 'friendship/friend_id:/user_id:', to: 'friendships#create', as: 'folllow'
-  get 'user/:user_id', to: 'users#show',as: 'users'
+  get 'friend/:frinds_id', to: 'users#frinds_stock',as: 'frinds_stock'
   # delete 'remove_friend', to: 'friendships#destroy', as: 'remove_friend'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

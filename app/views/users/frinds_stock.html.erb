@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-9">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Ticker</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @friend.stocks.each do |s|%>
+        <tr>
+          <td><%= s.name %></td>
+          <td><%= s.last_price %></td> 
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

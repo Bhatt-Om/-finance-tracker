@@ -11,7 +11,7 @@
       </thead>
         <% @friends.each do |friend| %>
           <tr>
-            <td><%= friend.email %></td>
+            <td><%= link_to "#{friend.email}", frinds_stock_path(frinds_id: friend.id) %></td>
             <td><%= friend.first_name %></td>
             <td><%= friend.last_name %></td>
             <td><%= button_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: 'Are you sure?'} %></td>

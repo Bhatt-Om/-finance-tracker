@@ -7,6 +7,10 @@ class UsersController < ApplicationController
     @friends = current_user.friends
   end
 
+  def frinds_stock
+    @friend = current_user.friends.find(params[:frinds_id])
+    return @friend
+  end
   def show
     @user = User.find_by(params[:user_id])
     redirect_to 'users/show' , allow_other_host: true
